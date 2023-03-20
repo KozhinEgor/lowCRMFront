@@ -1,0 +1,23 @@
+<form class="example-form">
+  <mat-form-field class="example-full-width" appearance="outline">
+    <mat-label>Врач</mat-label>
+    <input type="text"
+           placeholder="Выбери одну запись из списка"
+
+           matInput
+           [formControl]="myControl"
+           [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayWith">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{option.name}}
+      </mat-option>
+
+    </mat-autocomplete>
+    <mat-error *ngIf="myControl.hasError('incorrect')">
+      Не выбрано значение из <strong>списка</strong>
+    </mat-error>
+    <mat-error *ngIf="options.length == 0">
+      Не загружен список врачей
+    </mat-error>
+  </mat-form-field>
+</form>

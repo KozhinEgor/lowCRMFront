@@ -1,0 +1,34 @@
+.ChoseContainer{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px;
+  height: 70px;
+  border-bottom: 1px solid #cecece;
+}
+.ChoseContainer > *{
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.example-container {
+  height: calc(100% - 81px);
+}
+
+.disabled{
+  color: #abb0b0;
+}
+.noDisabled{
+  font-weight: bold;
+}
+.number-range{
+  width: 100px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.circle {
+  width: 20px;
+  height: 20px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}

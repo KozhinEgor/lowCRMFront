@@ -1,0 +1,16 @@
+<mat-accordion>
+  <mat-expansion-panel (opened)="panelOpenState = true"
+                       (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Фильтры
+      </mat-panel-title>
+      <mat-panel-description >
+        {{filterString}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <app-data-range (onDatePicked)="dateChange($event)" ></app-data-range>
+    <app-spec-doctor ></app-spec-doctor>
+    <app-doctor></app-doctor>
+  </mat-expansion-panel>
+</mat-accordion>
