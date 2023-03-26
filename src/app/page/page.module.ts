@@ -8,6 +8,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {NgxEchartsModule} from "ngx-echarts";
 import {FormsModule} from "@angular/forms";
 import {MaterialModule} from "../material.module";
+import {AppModule} from "../app.module";
 
 @NgModule({
   declarations: [

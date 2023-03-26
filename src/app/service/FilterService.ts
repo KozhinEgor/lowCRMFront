@@ -28,7 +28,7 @@ export class FilterService{
   public getSpecDoc():Observable<SpecDocDto[]> {
     return this.api.getSpecDoc();
   }
-  public getDoc():Observable<DocDto[]> {
+  public getDoc(spec?: any):Observable<DocDto[]> {
     return this.api.getDoc();
   }
 }

@@ -1,4 +1,5 @@
-export class SpecDocDto{
-  id: string;
-  name: string;
+import {BaseListFilterDto} from "./dto/BaseListFilterDto";
+
+export class SpecDocDto extends BaseListFilterDto{
+
 }

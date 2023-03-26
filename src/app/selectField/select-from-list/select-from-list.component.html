@@ -1,0 +1,14 @@
+<mat-form-field appearance="outline" style="grid-column: 2; grid-row: 1;">
+  <mat-label>Статус</mat-label>
+  <mat-select placeholder="Статус" [(ngModel)]="value" (ngModelChange)="getValue()">
+    <mat-option>
+      <ngx-mat-select-search
+        ngModel
+        (ngModelChange)="dictClaimStateFilter($event)"
+        placeholderLabel="Введите название"
+        noEntriesFoundLabel="Совпадения не найдены">
+      </ngx-mat-select-search>
+    </mat-option>
+    <mat-option *ngFor="let option of listFiltered | async" [value]="option.id">{{option.name}}</mat-option>
+  </mat-select>
+</mat-form-field>

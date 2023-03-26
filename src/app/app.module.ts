@@ -10,6 +10,7 @@ import {PageModule} from "./page/page.module";
 import {SelectModule} from "./selectField/select.module";
 import {ServiceModule} from "./service/service.module";
 import {MaterialModule} from "./material.module";
+import { SelectFromListComponent } from './selectField/select-from-list/select-from-list.component';
 
 
 @NgModule({
