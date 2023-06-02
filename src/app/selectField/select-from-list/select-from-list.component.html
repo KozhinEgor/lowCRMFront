@@ -1,6 +1,6 @@
-<mat-form-field appearance="outline" style="grid-column: 2; grid-row: 1;">
-  <mat-label>Статус</mat-label>
-  <mat-select placeholder="Статус" [(ngModel)]="value" (ngModelChange)="getValue()">
+<mat-form-field appearance="outline">
+  <mat-label>{{name}}</mat-label>
+  <mat-select placeholder="Статус" [(ngModel)]="value" (ngModelChange)="getValue(value)">
     <mat-option>
       <ngx-mat-select-search
         ngModel
@@ -9,6 +9,6 @@
         noEntriesFoundLabel="Совпадения не найдены">
       </ngx-mat-select-search>
     </mat-option>
-    <mat-option *ngFor="let option of listFiltered | async" [value]="option.id">{{option.name}}</mat-option>
+    <mat-option *ngFor="let option of listFiltered | async" [value]="option">{{option.name}}</mat-option>
   </mat-select>
 </mat-form-field>

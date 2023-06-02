@@ -17,7 +17,7 @@ export class ApiDictionaryService {
   public getSpecDoc(): Observable<SpecDocDto[]>{
     return this.http.get<SpecDocDto[]>(this.host + '/dictionary/doctor-spec')
   }
-  public getDoc(): Observable<DocDto[]>{
-    return this.http.get<DocDto[]>(this.host + '/dictionary/doctor')
+  public getDoc(spec?: any): Observable<DocDto[]>{
+    return this.http.get<DocDto[]>(this.host + '/dictionary/doctor',{ params: { doctorSpecs: (spec || []) } })
   }
 }

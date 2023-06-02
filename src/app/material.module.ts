@@ -26,7 +26,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatStepperModule} from "@angular/material/stepper";
 import {MAT_MOMENT_DATE_ADAPTER_OPTIONS} from "@angular/material-moment-adapter";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import {NgxMatSelectSearchModule} from "ngx-mat-select-search";
 
 @NgModule({
   declarations: [],
@@ -59,7 +59,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatExpansionModule,
     MatSidenavModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxMatSelectSearchModule
   ],
   exports: [
     MatMenuModule,
@@ -90,7 +91,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     MatExpansionModule,
     MatSidenavModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    NgxMatSelectSearchModule
   ],
   providers:[{provide: MAT_MOMENT_DATE_ADAPTER_OPTIONS, useValue: {useUtc: true}}, {provide: MAT_DATE_LOCALE, useValue: 'ru-RU'}]
 })

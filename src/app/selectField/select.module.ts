@@ -8,6 +8,7 @@ import { DoctorComponent } from './doctor/doctor.component';
 import {SelectFromListComponent} from "./select-from-list/select-from-list.component";
 
 
+
 @NgModule({
   declarations: [
     SelectGroupComponent,

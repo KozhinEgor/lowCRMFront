@@ -1,5 +1,5 @@
-import {BaseListFilterDto} from "./dto/BaseListFilterDto";
+import {BaseDictionary} from "./dto/BaseDictionary";
 
-export class SpecDocDto extends BaseListFilterDto{
+export class SpecDocDto extends BaseDictionary{
 
 }

@@ -1,0 +1,19 @@
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  max-width: 1100px;
+  margin: 16px;
+  gap: 8px;
+  .element{
+    padding: 0px;
+  }
+}
+
+.apply-buttons {
+  align-self: end;
+  justify-self: end;
+}
+
+

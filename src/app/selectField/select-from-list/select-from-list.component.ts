@@ -1,6 +1,6 @@
-import {Component, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {BehaviorSubject} from "rxjs";
-import {BaseListFilterDto} from "../../core/dto/BaseListFilterDto";
+import {BaseDictionary} from "../../core/dto/BaseDictionary";
 
 @Component({
   selector: 'app-select-from-list',
@@ -9,9 +9,13 @@ import {BaseListFilterDto} from "../../core/dto/BaseListFilterDto";
 })
 export class SelectFromListComponent implements OnInit {
 
-  value: BaseListFilterDto = new BaseListFilterDto();
-  listFiltered!: BehaviorSubject<BaseListFilterDto[]>;
-  listFilters: BaseListFilterDto[] = [];
+  @Input()
+  name:string = '';
+  value: BaseDictionary = new BaseDictionary();
+  listFiltered!: BehaviorSubject<BaseDictionary[]>;
+  listFilters: BaseDictionary[] = [];
+  @Output() onChanged = new EventEmitter<BaseDictionary>();
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,12 +24,12 @@ export class SelectFromListComponent implements OnInit {
     this.listFiltered.next(this.listFilters.filter(x => (x.name || '').toUpperCase().indexOf(e.toUpperCase()) >= 0));
   }
 
-  public setValue(listFiltered: BehaviorSubject<BaseListFilterDto[]>, listFilters: BaseListFilterDto[]){
+  public setValue(listFiltered: BehaviorSubject<BaseDictionary[]>, listFilters: BaseDictionary[]){
     this.listFiltered = listFiltered;
     this.listFilters = listFilters;
   }
 
-  public getValue(){
-    // console.log('changeValue')
+  public getValue(value: BaseDictionary){
+    this.onChanged.emit(value);
   }
 }

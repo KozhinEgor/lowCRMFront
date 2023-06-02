@@ -1,0 +1,101 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/theming';
+@include mat-core();
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+  padding: 0;
+}
+
+.mat-form-field-infix {
+  textarea {
+    max-height: 300px;
+  }
+}
+
+.mat-input-element:disabled {
+  color: black;
+}
+
+.mat-form-field-disabled {
+  .mat-form-field-label {
+    color: black !important;
+  }
+}
+
+.controls-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  button {
+    min-height: 50px;
+    .mat-icon {
+      font-size: 24px;
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
+
+.inputs-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  column-gap: 10px;
+}
+
+.input-with-options {
+  .mat-form-field-outline,
+  .mat-form-field-label-wrapper {
+    display: none !important;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-flex {
+    margin: 0 !important;
+  }
+  .mat-form-field-infix {
+    padding: 0;
+    margin: 0;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    width: 280px;
+    border: 0;
+    input {
+      font-size: 16px;
+    }
+  }
+  .mat-list {
+    padding: 0;
+  }
+  .mat-list-base .mat-list-item {
+    font-size: 14px;
+    font-weight: normal;
+  }
+  .mat-list-item {
+    font-size: 14px;
+    font-weight: normal;
+    transition: 200ms ease;
+    &:hover {
+      background-color: var(--color-sub-hov);
+    }
+  }
+  .mat-form-field-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-radius: 6px;
+  }
+  .container__options {
+    max-height: none;
+  }
+}

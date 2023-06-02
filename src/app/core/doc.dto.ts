@@ -1,7 +1,7 @@
 import {SpecDocDto} from "./spec.doc.dto";
-import {BaseListFilterDto} from "./dto/BaseListFilterDto";
+import {BaseDictionary} from "./dto/BaseDictionary";
 
-export class DocDto extends BaseListFilterDto{
+export class DocDto extends BaseDictionary{
 
   spec:SpecDocDto | null = null;
 }

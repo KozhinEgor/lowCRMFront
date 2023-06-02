@@ -9,7 +9,16 @@
         {{filterString}}
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <app-data-range (onDatePicked)="dateChange($event)" ></app-data-range>
-    <app-select-from-list #doctors></app-select-from-list>
+    <div class="grid">
+      <app-data-range (onDatePicked)="dateChange($event)" style="grid-column: 1; grid-row: 1;" class="element"></app-data-range>
+      <app-select-from-list #doctors name="Доктор" style="grid-column: 2; grid-row: 1;" class="element"></app-select-from-list>
+      <app-select-from-list #specDoctors (onChanged)="specDoctorChange($event)" name="Специализация врача" style="grid-column: 3; grid-row: 1; " class="element"></app-select-from-list>
+      <div style="grid-column: 1; grid-row: 2;" class="apply-buttons">
+        <button mat-raised-button color="primary"(click)="show()">Сформировать отчет</button>
+      </div>
+
+    </div>
+
+
   </mat-expansion-panel>
 </mat-accordion>
